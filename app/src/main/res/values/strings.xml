@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Mobile Number</string>
+    <string name="MobileNumber">Mobile Number</string>
+    <string name="Message">Message</string>
+    <string name="NumberHint">Number</string>
+    <string name="MessageHint">Message</string>
+    <string name="Next">Next</string>
+    <string name="Close">Close</string>
+
+
 </resources>

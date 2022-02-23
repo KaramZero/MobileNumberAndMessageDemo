@@ -12,15 +12,16 @@
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:textAlignment="center"
-            android:text="Mobile Number" />
+            android:text="@string/MobileNumber"
+            android:textAlignment="center" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Number"
+            android:hint="@string/NumberHint"
             android:id="@+id/mobileNumber"/>
     </LinearLayout>
 
@@ -29,15 +30,16 @@
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:textAlignment="center"
-            android:text="Message" />
+            android:text="@string/Message"
+            android:textAlignment="center" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Message"
+            android:hint="@string/MessageHint"
             android:id="@+id/message"/>
     </LinearLayout>
 
@@ -50,14 +52,14 @@
            android:layout_width="100dp"
            android:layout_height="50dp"
            android:layout_marginLeft="100dp"
-           android:text="Next"
+           android:text="@string/Next"
            android:id="@+id/next"
            android:onClick="next"/>
         <Button
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
-            android:text="Close"
+            android:text="@string/Close"
             android:onClick="close"
             android:id="@+id/close"/>
     </LinearLayout>

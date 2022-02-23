@@ -16,7 +16,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:textAlignment="center"
-            android:text="Mobile Number" />
+            android:text="@string/MobileNumber" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -33,7 +33,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:textAlignment="center"
-            android:text="Message" />
+            android:text="@string/Message" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -51,7 +51,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_marginLeft="160dp"
-            android:text="Close"
+            android:text="@string/Close"
             android:onClick="close"
             android:id="@+id/close"/>
     </LinearLayout>

@@ -15,8 +15,8 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         Intent intent = getIntent();
-        String mes = intent.getStringExtra("message");
-        String num = intent.getStringExtra("number");
+        String mes = intent.getStringExtra(MainActivity.msgKey);
+        String num = intent.getStringExtra(MainActivity.numKey);
 
         TextView number = findViewById(R.id.mobileNumber);
         TextView message = findViewById(R.id.message);
@@ -27,7 +27,6 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void close(View view){
-        finishAffinity();
-        System.exit(0);
+        finish();
     }
 }

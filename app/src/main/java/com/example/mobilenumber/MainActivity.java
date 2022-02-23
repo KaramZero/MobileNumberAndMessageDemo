@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -13,6 +12,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String msgKey = "message";
+    public static final String numKey = "number";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
             if(matcher.find()){
                 Intent intent = new Intent(this,SecondActivity.class);
-                intent.putExtra("number",num);
-                intent.putExtra("message",message.getText().toString());
+                intent.putExtra(numKey,num);
+                intent.putExtra(msgKey,message.getText().toString());
                 startActivity(intent);
             }else{
                 Toast toast = Toast.makeText(getApplicationContext(),"Enter valid phone number",Toast.LENGTH_SHORT);
@@ -46,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void close(View view){
-        finishAffinity();
-        System.exit(0);
+        finish();
     }
 }
