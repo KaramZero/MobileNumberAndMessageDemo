@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         String num =  number.getText().toString();
 
         if(num.length()>0){
-            Pattern pattern = Pattern.compile("[0-9]+", Pattern.CASE_INSENSITIVE);
+            Pattern pattern = Pattern.compile("^\\d+$", Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(num.trim());
 
             if(matcher.find()){

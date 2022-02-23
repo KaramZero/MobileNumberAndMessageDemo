@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Mobile Number</string>
+    <string name="app_name">رقم الهاتف</string>
     <string name="MobileNumber">رقم الهاتف</string>
     <string name="Message">الرسالة</string>
     <string name="NumberHint">ادخل الرقم</string>
