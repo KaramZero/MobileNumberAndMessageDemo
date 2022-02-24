@@ -64,5 +64,4 @@
             android:id="@+id/close"/>
     </LinearLayout>
 
-
 </LinearLayout>

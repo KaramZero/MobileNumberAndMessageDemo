@@ -56,5 +56,35 @@
             android:id="@+id/close"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:text="@string/NextMessage"
+            android:onClick="nextMSG"
+            android:id="@+id/nextMSG"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/PrevMessage"
+            android:onClick="prevMSG"
+            android:id="@+id/prevMSG"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="160dp"
+        android:text="@string/clear"
+        android:onClick="clearAll"
+        android:id="@+id/clear"/>
+
 
 </LinearLayout>

@@ -7,6 +7,9 @@
     <string name="MessageHint">ادخل الرسالة</string>
     <string name="Next">التالي</string>
     <string name="Close">اغلاق</string>
+    <string name="NextMessage">التالي</string>
+    <string name="PrevMessage">السابق</string>
+    <string name="clear">مسح الكل</string>
 
 
 </resources>

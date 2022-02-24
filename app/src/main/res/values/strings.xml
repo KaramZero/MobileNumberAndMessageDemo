@@ -6,6 +6,10 @@
     <string name="MessageHint">Message</string>
     <string name="Next">Next</string>
     <string name="Close">Close</string>
+    <string name="NextMessage">Next MSG</string>
+    <string name="PrevMessage">Prev MSG</string>
+    <string name="clear">Clear</string>
+
 
 
 </resources>
