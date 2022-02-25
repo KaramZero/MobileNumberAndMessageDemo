@@ -1,17 +1,26 @@
 package com.example.mobilenumber;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Formattable;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class SecondActivity extends AppCompatActivity {
@@ -23,7 +32,9 @@ public class SecondActivity extends AppCompatActivity {
     String num;
     int counter=-1;
     Map<String,String> map = new HashMap<String, String>();
-    SharedPreferences data;
+
+    MyDataStorage storage;
+
 
 
     @Override
@@ -36,17 +47,16 @@ public class SecondActivity extends AppCompatActivity {
         msg = intent.getStringExtra(MainActivity.msgKey);
         num = intent.getStringExtra(MainActivity.numKey);
 
+       storage = new InternalStorage(this);
+        //storage = new MyPreferences(this);
+
         number = findViewById(R.id.mobileNumber);
         message = findViewById(R.id.message);
 
         number.setText(num);
         message.setText(msg);
 
-
-        data=getPreferences(MODE_PRIVATE);
-
-        map= (Map<String, String>) data.getAll();
-
+        map= storage.getData();
 
         if (savedInstanceState!=null){
             counter=savedInstanceState.getInt("counter");
@@ -57,25 +67,12 @@ public class SecondActivity extends AppCompatActivity {
             counter =map.size()/2;
             map.put(KEY+"num"+counter,num);
             map.put(KEY+"msg"+counter, msg);
+
+            storage.saveData(num,msg,counter);
+
         }
 
-
     }
-
-    void saveData(){
-
-
-        SharedPreferences.Editor editor = data.edit();
-        editor.clear().commit();
-
-        for(int i=0;i<map.size()/2;i++){
-            editor.putString(KEY+"num"+i,map.get(KEY+"num"+i));
-            editor.putString(KEY+"msg"+i, map.get(KEY+"msg"+i));
-        }
-        editor.commit();
-
-    }
-
 
 
     @Override
@@ -87,7 +84,6 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        saveData();
     }
 
     public void close(View view){
@@ -114,5 +110,7 @@ public class SecondActivity extends AppCompatActivity {
         counter = 0;
         number.setText("All are cleared ");
         message.setText("Back to enter new data ");
+
+        storage.clear();
     }
 }
