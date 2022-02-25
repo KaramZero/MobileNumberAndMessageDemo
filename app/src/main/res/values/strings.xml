@@ -1,14 +1,22 @@
 <resources>
     <string name="app_name">Mobile Number</string>
-    <string name="MobileNumber">Mobile Number</string>
+    <string name="MobileNumber">Number</string>
     <string name="Message">Message</string>
     <string name="NumberHint">Number</string>
     <string name="MessageHint">Message</string>
     <string name="Next">Next</string>
     <string name="Close">Close</string>
-    <string name="NextMessage">Next MSG</string>
-    <string name="PrevMessage">Prev MSG</string>
+    <string name="NextMessage">N</string>
+    <string name="PrevMessage">P</string>
     <string name="clear">Clear</string>
+    <string name="shared_preferences">Shared Preferences</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="sql">SQL</string>
+    <string name="SP">SP</string>
+    <string name="in">IN</string>
+    <string name="AllCleard">All are cleared</string>
+    <string name="reTypeAgain">Back to enter new data</string>
+    <string name="DataNotFound">Data Not Found</string>
 
 
 

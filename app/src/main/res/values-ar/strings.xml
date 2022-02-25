@@ -10,6 +10,13 @@
     <string name="NextMessage">التالي</string>
     <string name="PrevMessage">السابق</string>
     <string name="clear">مسح الكل</string>
-
+    <string name="shared_preferences">Shared Preferences</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="sql">SQL</string>
+    <string name="SP">SP</string>
+    <string name="in">IN</string>
+    <string name="AllCleard">تم مسح الكل</string>
+    <string name="reTypeAgain">أعد ادخال البيانات</string>
+    <string name="DataNotFound">لا يوجد بيانات لهذا الرقم</string>
 
 </resources>

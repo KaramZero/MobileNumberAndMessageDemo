@@ -29,33 +29,34 @@ public class MainActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE);
         }
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) !=PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             requestPermissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
 
     }
-    public void next(View view){
+
+    public void next(View view) {
 
         EditText number = findViewById(R.id.mobileNumber);
         EditText message = findViewById(R.id.message);
 
-        String num =  number.getText().toString();
+        String num = number.getText().toString();
 
-        if(num.length()>0){
+        if (num.length() > 0) {
             Pattern pattern = Pattern.compile("^\\d+$", Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(num.trim());
 
-            if(matcher.find()){
-                Intent intent = new Intent(this,SecondActivity.class);
-                intent.putExtra(numKey,num);
-                intent.putExtra(msgKey,message.getText().toString());
+            if (matcher.find()) {
+                Intent intent = new Intent(this, SecondActivity.class);
+                intent.putExtra(numKey, num);
+                intent.putExtra(msgKey, message.getText().toString());
                 startActivity(intent);
-            }else{
-                Toast toast = Toast.makeText(getApplicationContext(),"Enter valid phone number",Toast.LENGTH_SHORT);
+            } else {
+                Toast toast = Toast.makeText(getApplicationContext(), "Enter valid phone number", Toast.LENGTH_SHORT);
                 toast.show();
             }
-        }else{
-            Toast toast = Toast.makeText(getApplicationContext(),"phone number can't be empty",Toast.LENGTH_SHORT);
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "phone number can't be empty", Toast.LENGTH_SHORT);
             toast.show();
         }
     }
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
             });
 
-    public void close(View view){
+    public void close(View view) {
         finish();
     }
 }
